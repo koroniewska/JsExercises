@@ -1,20 +1,24 @@
+
+let userName = prompt("Good afternoon, how may I call you?", "User");
+
 let player = {
-    name: "User",
-    chips: 0
+    name: userName,
+    chips: "billions of dollars"
 }
+
 let cards = [];
 let sum = 0;
 let hasBlackJack = false;
-let isAlive = false;
 
+let isAlive = false;
 let message = "";
 let messageEl = document.getElementById("message-el");
+
 let sumEl = document.querySelector("#sum-el");
 
 let cardsEl = document.querySelector("#cards-el");
-
 let playerEl = document.querySelector("#player-el");
-playerEl.textContent = player.name + ": $" + player.chips
+playerEl.textContent = player.name + " has:  " + player.chips
 
 function startGame(){
     isAlive = true;
@@ -58,6 +62,8 @@ function getRandomCard() {
         return 10
     } else return randomNumber
 }
+
+
 
 
 
